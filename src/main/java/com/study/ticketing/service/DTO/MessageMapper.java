@@ -1,0 +1,22 @@
+package com.study.ticketing.service.DTO;
+
+import com.study.ticketing.Entity.Message;
+
+public class MessageMapper {
+
+    public static MessageDTO toDTO(Message message) {
+        MessageDTO dto = new MessageDTO();
+        dto.setId(message.getId());
+        dto.setText(message.getText());
+        dto.setDate(message.getDate());
+        return dto;
+    }
+
+    public static Message toEntity(MessageDTO dto) {
+        Message message = new Message();
+        message.setId(dto.getId());
+        message.setText(dto.getText());
+        message.setDate(dto.getDate());
+        return message;
+    }
+}
