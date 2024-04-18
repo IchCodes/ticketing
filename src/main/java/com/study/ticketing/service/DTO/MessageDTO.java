@@ -8,7 +8,8 @@ import java.time.LocalDate;
 @Getter
 @Setter
 public class MessageDTO {
-    private Long id;
     private String text;
     private LocalDate date;
+    private String author;
+    private String customField1;
 }
