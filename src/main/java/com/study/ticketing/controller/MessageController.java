@@ -16,7 +16,7 @@ public class MessageController {
 
     private final MessageService messageService;
 
-    @GetMapping("message/{id}")
+    @GetMapping(value = "message/{id}", produces = "application/json;charset=UTF-8")
     public MessageDTO getMessage(@PathVariable Long id) {
         return messageService.getMessage(id)
                 .orElseGet(() -> {
