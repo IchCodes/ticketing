@@ -9,6 +9,8 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
+import java.util.List;
+
 @RestController
 @RequestMapping("/api")
 @RequiredArgsConstructor
@@ -25,5 +27,11 @@ public class MessageController {
                     // Set other properties of defaultMessage as needed
                     return defaultMessage;
                 });
+    }
+
+    //requete get avec url message pour retrieve all message
+    @GetMapping("message")
+    public List<MessageDTO> getAllMessage() {
+        return messageService.getAllMessage();
     }
 }
