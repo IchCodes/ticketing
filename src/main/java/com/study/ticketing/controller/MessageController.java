@@ -30,7 +30,7 @@ public class MessageController {
     }
 
     //requete get avec url message pour retrieve all message
-    @GetMapping("message")
+    @GetMapping("message/all")
     public List<MessageDTO> getAllMessage() {
         return messageService.getAllMessage();
     }
